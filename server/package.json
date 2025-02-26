@@ -13,6 +13,7 @@
   "type": "commonjs",
   "dependencies": {
     "@pinecone-database/pinecone": "^5.0.2",
+    "@types/express": "^5.0.0",
     "axios": "^1.8.1",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
