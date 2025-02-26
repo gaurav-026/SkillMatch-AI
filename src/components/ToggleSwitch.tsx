@@ -58,7 +58,7 @@ const ToggleSwitch = () => {
       formData.append("pdf", candidate.pdf); // Ensure it's a File object
 
       const response = await axios.post(
-        "http://localhost:4000/api/v1/parse-resume",
+        "https://skillmatch-ai-psnp.onrender.com/api/v1/parse-resume",
         formData,
         {
           headers: {
@@ -98,7 +98,7 @@ const ToggleSwitch = () => {
     setLoading(true);
     toast.loading("Matching with the given role..");
     const response = await axios.post(
-      "http://localhost:4000/api/v1/profile-match",
+      "https://skillmatch-ai-psnp.onrender.com/api/v1/profile-match",
       {
         description: jobDescription.description,
         skills: Array.isArray(jobDescription.skills)
