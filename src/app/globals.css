@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -15,7 +16,27 @@
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  color: var(--background);
+  background: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.spinner {
+  width: 40px;
+height: 40px;
+border-radius: 50%;
+background: #f1f1f1;
+-webkit-mask: repeating-conic-gradient(#0000 0deg, #000 1deg 50deg, #0000 51deg 90deg),
+     radial-gradient(farthest-side, #0000 calc(100% - 7px), #000 calc(100% - 6px));
+-webkit-mask-composite: destination-in;
+mask-composite: intersect;
+animation: spinner-mv2oco 1s infinite;
+
+}
+
+@keyframes spinner-mv2oco {
+  to {
+     transform: rotate(.5turn);
+  }
 }
